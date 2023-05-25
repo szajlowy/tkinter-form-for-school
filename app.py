@@ -41,7 +41,7 @@ radio02.grid(row=4, column=1, sticky='w')
 radio03 = tk.Radiobutton(window, text='Attack helicopter', variable=gender, value='A')
 radio03.grid(row=5, column=1, sticky='w')
 
-radio04 = tk.Radiobutton(window, text='Other', variable=gender, value='E')
+radio04 = tk.Radiobutton(window, text='Other', variable=gender, value='O')
 radio04.grid(row=6, column=1, sticky='w')
 
 label04 = tk.Label(window, text='Age:')

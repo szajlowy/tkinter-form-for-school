@@ -11,6 +11,7 @@ window.grid_columnconfigure(1, weight=3)
 first_name = tk.StringVar()
 last_name = tk.StringVar()
 gender = tk.StringVar(value='M')
+age = tk.IntVar
 
 
 label01 = tk.Label(window, text="Register", font='Verdana 16 bold')
@@ -42,6 +43,12 @@ radio03.grid(row=5, column=1, sticky='w')
 
 radio04 = tk.Radiobutton(window, text='Other', variable=gender, value='E')
 radio04.grid(row=6, column=1, sticky='w')
+
+label04 = tk.Label(window, text='Age:')
+label04.grid(row=7, column=0)
+
+scale01 = tk.Scale(window, from_=0, to=120, orient=tk.HORIZONTAL, variable=age)
+scale01.grid(row=7, column=1, sticky='ew')
 
 
 window.mainloop()

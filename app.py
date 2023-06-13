@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 window = tk.Tk()
 window.title('Form')
@@ -12,6 +13,7 @@ first_name = tk.StringVar()
 last_name = tk.StringVar()
 gender = tk.StringVar(value='M')
 age = tk.IntVar
+province = tk.StringVar()
 
 
 label01 = tk.Label(window, text="Register", font='Verdana 16 bold')
@@ -49,6 +51,16 @@ label04.grid(row=7, column=0)
 
 scale01 = tk.Scale(window, from_=0, to=120, orient=tk.HORIZONTAL, variable=age)
 scale01.grid(row=7, column=1, sticky='ew')
+
+label05 = tk.Label(window, text='Province:')
+label05.grid(row=8, column=0)
+
+combobox01 = ttk.Combobox(window, textvariable=province)
+combobox01['values'] = ('dolnośląskie', 'kujawsko-pomorskie', 'lubelskie', 'lubuskie', 'łódzkie', 'małopolskie', 'mazowieckie', 'opolskie', 'podkarpackie', 'podlaskie', 'pomorskie', 'śląskie', 'świętokrzyskie', 'warmińsko-mazurskie', 'wielkopolskie', 'zachodniopomorskie')
+combobox01.grid(row=8, column=1, sticky='ew')
+
+btn01 = tk.Button(text='Submit')
+btn01.grid(row=9, column=0, columnspan=2)
 
 
 window.mainloop()

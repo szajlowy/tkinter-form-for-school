@@ -14,6 +14,7 @@ last_name = tk.StringVar()
 gender = tk.StringVar(value='M')
 age = tk.IntVar
 province = tk.StringVar()
+check = tk.IntVar()
 
 
 label01 = tk.Label(window, text="Register", font='Verdana 16 bold')
@@ -59,8 +60,11 @@ combobox01 = ttk.Combobox(window, textvariable=province)
 combobox01['values'] = ('dolnośląskie', 'kujawsko-pomorskie', 'lubelskie', 'lubuskie', 'łódzkie', 'małopolskie', 'mazowieckie', 'opolskie', 'podkarpackie', 'podlaskie', 'pomorskie', 'śląskie', 'świętokrzyskie', 'warmińsko-mazurskie', 'wielkopolskie', 'zachodniopomorskie')
 combobox01.grid(row=8, column=1, sticky='ew')
 
+c01 = tk.Checkbutton(window, text='Accept the Terms of Service', variable=check)
+c01.grid(row=9, column=0, columnspan=2)
+
 btn01 = tk.Button(text='Submit')
-btn01.grid(row=9, column=0, columnspan=2)
+btn01.grid(row=10, column=0, columnspan=2)
 
 
 window.mainloop()

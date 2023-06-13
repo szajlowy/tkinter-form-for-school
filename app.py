@@ -66,5 +66,14 @@ c01.grid(row=9, column=0, columnspan=2)
 btn01 = tk.Button(text='Submit')
 btn01.grid(row=10, column=0, columnspan=2)
 
+up = tk.PhotoImage(file='up.png')
+label06 = tk.Label(
+    master = window,
+    image = up,
+    width = 512,
+    height = 512
+)
+label06.grid(row=11, column=0, columnspan=2)
+
 
 window.mainloop()
